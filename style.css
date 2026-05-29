@@ -1,0 +1,463 @@
+/* ==========================================================================
+   GLOBAL DESIGN SYSTEM & VARIABLES
+   ========================================================================== */
+:root {
+    --bg-cream: #eaddd3;
+    --bg-dark-charcoal: #332f2c;
+    --text-dark: #22201e;
+    --text-light: #fdfaf7;
+    --font-heading: 'Adobe Garamond Pro', 'Garamond', 'Georgia', serif;
+    --font-body: 'Helvetica Neue', 'Arial', sans-serif;
+    --border-radius-sm: 18px;
+    --border-radius-lg: 32px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-cream);
+    color: var(--text-dark);
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-heading);
+    font-weight: normal;
+    color: var(--text-dark);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* ==========================================================================
+   SHARED HEADER & GLOBAL NAVIGATION
+   ========================================================================== */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 4%;
+    background-color: var(--bg-cream);
+    width: 100%;
+}
+
+.brand-logo {
+    font-family: var(--font-heading);
+    font-size: 26px;
+    color: var(--text-dark);
+}
+
+.main-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.main-nav a {
+    font-size: 15px;
+    position: relative;
+    padding-bottom: 3px;
+}
+
+.main-nav li.active a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--text-dark);
+}
+
+.btn-pill {
+    background-color: var(--bg-dark-charcoal);
+    color: var(--text-light);
+    padding: 14px 28px;
+    border-radius: 40px;
+    font-size: 14px;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.btn-pill:hover {
+    transform: scale(1.02);
+}
+
+/* ==========================================================================
+   SHARED FOOTER
+   ========================================================================== */
+.site-footer {
+    border-top: 1px solid rgba(0,0,0,0.1);
+    padding: 60px 6% 30px 6%;
+    margin-top: 40px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-about {
+    font-size: 15px;
+    max-width: 500px;
+}
+
+.footer-contact {
+    text-align: right;
+    font-size: 15px;
+}
+
+.footer-contact p {
+    margin-bottom: 4px;
+}
+
+.footer-contact a {
+    text-decoration: underline;
+}
+
+/* ==========================================================================
+   HOME PAGE SPECIFIC STYLES (Updated with Web Link Image)
+   ========================================================================== */
+.hero-section {
+    position: relative;
+    background: linear-gradient(rgba(234, 221, 211, 0.82), rgba(234, 221, 211, 0.82)), url('https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1600&q=80') no-repeat center center;
+    background-size: cover;
+    text-align: center;
+    padding: 100px 10%;
+    min-height: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-section h1 {
+    font-size: 44px;
+    max-width: 900px;
+    margin-bottom: 40px;
+}
+
+.hero-section p {
+    font-size: 18px;
+    max-width: 700px;
+    margin-bottom: 40px;
+}
+
+.home-services-section {
+    text-align: center;
+    padding: 80px 4%;
+}
+
+.home-services-section h2 {
+    font-size: 38px;
+    margin-bottom: 60px;
+}
+
+.services-three-col {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.service-col h3 {
+    font-size: 22px;
+    margin-bottom: 25px;
+}
+
+.service-col p {
+    font-size: 15px;
+    color: #444;
+    text-align: left;
+}
+
+.trust-section {
+    background-color: var(--bg-dark-charcoal);
+    color: var(--text-light);
+    text-align: center;
+    padding: 90px 4%;
+}
+
+.trust-section h2 {
+    color: var(--text-light);
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.trust-metrics {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 18px;
+}
+
+.trust-metrics li::before {
+    content: "• ";
+    padding-right: 5px;
+}
+
+/* ==========================================================================
+   SERVICES PAGE SPECIFIC STYLES
+   ========================================================================== */
+.page-intro-header {
+    text-align: center;
+    padding: 70px 10%;
+}
+
+.page-intro-header h1 {
+    font-size: 46px;
+    margin-bottom: 30px;
+}
+
+.page-intro-header p {
+    font-size: 18px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.alternating-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 4%;
+}
+
+.service-row {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    margin-bottom: 100px;
+}
+
+.service-row.reverse {
+    flex-direction: row-reverse;
+}
+
+.service-media, .service-desc {
+    flex: 1;
+}
+
+.service-media img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: var(--border-radius-lg);
+    object-fit: cover;
+}
+
+.service-desc h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.service-desc p {
+    font-size: 16px;
+    color: #333;
+}
+
+.bottom-cta {
+    text-align: center;
+    padding: 80px 4%;
+}
+
+.bottom-cta h2 {
+    font-size: 38px;
+    margin-bottom: 25px;
+}
+
+.bottom-cta p {
+    font-size: 18px;
+    margin-bottom: 35px;
+}
+
+/* ==========================================================================
+   CAREERS PAGE STYLES (Updated with Web Link Image)
+   ========================================================================== */
+.careers-hero {
+    background: linear-gradient(rgba(234, 221, 211, 0.88), rgba(234, 221, 211, 0.88)), url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1600&q=80') no-repeat center center;
+    background-size: cover;
+    text-align: center;
+    padding: 100px 6%;
+}
+
+.careers-hero h1 {
+    font-size: 44px;
+    margin-bottom: 25px;
+}
+
+.careers-hero p {
+    font-size: 18px;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.split-layout-section {
+    max-width: 1150px;
+    margin: 80px auto;
+    padding: 0 4%;
+    display: flex;
+    gap: 80px;
+}
+
+.split-left {
+    flex: 1;
+}
+
+.split-left h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+.split-left p {
+    font-size: 16px;
+    margin-bottom: 25px;
+    max-width: 450px;
+}
+
+.split-right {
+    flex: 1.2;
+}
+
+/* ==========================================================================
+   UNIVERSAL BOXED FORM STYLING
+   ========================================================================== */
+.squarespace-style-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group-row {
+    display: flex;
+    gap: 20px;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.form-field label {
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+
+.form-field label span {
+    color: #666;
+    font-size: 13px;
+}
+
+.form-input {
+    background: transparent;
+    border: 1px solid #777;
+    border-radius: var(--border-radius-sm);
+    padding: 14px 18px;
+    font-size: 15px;
+    width: 100%;
+    outline: none;
+}
+
+.form-textarea {
+    background: transparent;
+    border: 1px solid #777;
+    border-radius: var(--border-radius-sm);
+    padding: 14px 18px;
+    font-size: 15px;
+    width: 100%;
+    min-height: 130px;
+    resize: vertical;
+    outline: none;
+}
+
+.form-checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+.form-checkbox-label input {
+    width: 16px;
+    height: 16px;
+    accent-color: var(--bg-dark-charcoal);
+}
+
+/* ==========================================================================
+   CONTACT PAGE STYLES
+   ========================================================================== */
+.contact-section-container {
+    max-width: 1150px;
+    margin: 40px auto 80px auto;
+    padding: 0 4%;
+}
+
+.contact-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.contact-header h1 {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.contact-header p {
+    font-size: 16px;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.contact-split-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 60px;
+    align-items: start;
+}
+
+.contact-media-wrapper img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-radius-lg);
+    object-fit: cover;
+}
+
+/* ==========================================================================
+   MOBILE RESPONSIVE BREAKPOINTS
+   ========================================================================== */
+@media (max-width: 900px) {
+    .site-header {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .services-three-col, .footer-grid, .contact-split-grid {
+        grid-template-columns: 1fr;
+    }
+    .service-row, .service-row.reverse, .split-layout-section {
+        flex-direction: column;
+        gap: 40px;
+    }
+    .footer-contact {
+        text-align: left;
+    }
+    .trust-metrics {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
