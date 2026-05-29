@@ -31,7 +31,19 @@
         <div class="contact-split-grid">
             
             <div class="contact-form-wrapper">
-                <form action="https://formspree.io/f/xqejjldp" method="POST" class="squarespace-style-form">
+                <!-- 1. UPDATED ACTION: Connected to the Static Forms API -->
+                <form action="https://api.staticforms.dev/submit" method="POST" class="squarespace-style-form">
+                    
+                    <!-- 2. ADDED API KEY: Replace the value below with your actual Static Forms Key -->
+                    <input type="hidden" name="apiKey" value="sf_0f5c49a0ef900020e95daa9b">
+
+                    <!-- 3. IDENTIFIERS: Configured for General Inquiries and custom redirect link -->
+                    <input type="hidden" name="formType" value="General Inquiry">
+                    <input type="hidden" name="subject" value="New Business Inquiry">
+                    <input type="hidden" name="redirectTo" value="https://markitbettersolutions.ca/thank-you.html">
+
+                    <!-- 4. ANTI-SPAM: Invisible honeypot to stop spam bots silently -->
+                    <input type="text" name="honeypot" style="display:none">
                     
                     <div class="form-field">
                         <label>Name</label>
@@ -63,7 +75,6 @@
                 </form>
             </div>
 
-            <!-- Right Side: Uses an automatic business meeting placeholder link -->
             <div class="contact-media-wrapper">
                 <img src="https://images.unsplash.com/photo-1606857521015-7f9fcf423740?auto=format&fit=crop&w=800&q=80" alt="Mark IT Better Business Consultation Team Session">
             </div>
